@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ueno Sean A. Salay – IT Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#d6e8ff; --bg2:#f3e4f7; --card:#ffffffd9; --ink:#14224a; --muted:#51618f; --line:#b9cdf0; --accent:#2f62f5; --pink:#ffc9e3; --lilac:#d9d0ff; --on-accent:#fff;
+  --display:"Unbounded","Arial Rounded MT Bold",Arial,sans-serif;
+  --body:"DM Sans","Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0c1431; --bg2:#1c1740; --card:#16214ad9; --ink:#eaf0ff; --muted:#9db0e6; --line:#2b3b78; --accent:#8fb0ff; --pink:#6b3a67; --lilac:#3b3478; --on-accent:#0c1431;}
+}
+:root[data-theme="dark"]{--bg:#0c1431; --bg2:#1c1740; --card:#16214ad9; --ink:#eaf0ff; --muted:#9db0e6; --line:#2b3b78; --accent:#8fb0ff; --pink:#6b3a67; --lilac:#3b3478; --on-accent:#0c1431;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;background:var(--bg)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased;
+  background:radial-gradient(60rem 30rem at 10% -5%,var(--pink),transparent 60%),radial-gradient(50rem 30rem at 100% 10%,var(--lilac),transparent 60%),linear-gradient(var(--bg),var(--bg2))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+.wrap{width:min(680px,100% - 2rem);margin-inline:auto;padding-bottom:2rem}
+
+.bar{display:flex;justify-content:flex-end;padding:1rem 0}
+.theme{font:500 .9rem var(--body);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;cursor:pointer}
+.theme:hover{border-color:var(--accent)}
+
+.cover{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:clamp(1.5rem,5vw,2.5rem);text-align:center;backdrop-filter:blur(8px)}
+.photo{width:clamp(150px,42vw,220px);aspect-ratio:1;margin:0 auto 1.5rem;border-radius:32px;border:6px solid #fff;overflow:hidden;box-shadow:0 12px 30px #2f62f533;transform:rotate(-3deg);animation:settle .9s cubic-bezier(.2,.9,.3,1.2) both}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+@keyframes settle{from{transform:rotate(8deg) scale(.85);opacity:0}}
+h1{font:700 clamp(1.6rem,6.5vw,2.6rem)/1.1 var(--display);letter-spacing:-.03em;margin:0 0 .6rem}
+.role{margin:0 0 1.25rem;color:var(--muted);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.chip{background:var(--pink);color:var(--ink);padding:.3rem .9rem;border-radius:999px;font-size:.9rem;font-weight:500}
+.chip.blue{background:var(--lilac)}
+
+h2.list{font:500 .95rem var(--display);margin:2rem .25rem .75rem;color:var(--muted)}
+.tracks{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
+.track{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.25rem 1.4rem;display:grid;grid-template-columns:2.5rem 1fr;gap:.25rem 1rem;backdrop-filter:blur(8px)}
+.no{grid-row:span 2;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:700 .85rem var(--display)}
+.track h3{font:700 1.05rem/1.3 var(--display);margin:.35rem 0 .35rem;letter-spacing:-.01em}
+.track p{margin:0}
+.sub{color:var(--muted);font-size:.95rem}
+.track ul{list-style:none;margin:0;padding:0}
+.entry{margin-bottom:.9rem}.entry:last-child{margin-bottom:0}
+.entry strong{display:block;font-weight:700}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.tags li{background:var(--lilac);padding:.25rem .8rem;border-radius:999px;font-size:.92rem}
+.contact a{color:var(--accent);font-weight:700;word-break:break-word}
+.phone{margin-top:.4rem!important}
+.btn{display:inline-block;margin-top:.9rem;background:var(--accent);color:var(--on-accent)!important;padding:.65rem 1.3rem;border-radius:999px;text-decoration:none;font-weight:700}
+.track .links{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:1.1rem}
+.soon{color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:2rem}
+
+@media (max-width:520px){.track{grid-template-columns:2.25rem 1fr;padding:1.1rem}.no{width:2.25rem;height:2.25rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photo{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar"><button id="theme" class="theme" type="button">Dark mode</button></div>
+
+  <header class="cover">
+    <div class="photo"><img src="data:image/jpeg;base64,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" alt="Portrait of Ueno Sean A. Salay" width="220" height="220"></div>
+    <h1>Ueno Sean A. Salay</h1>
+    <p class="role">IT Support | Technical Support</p>
+    <div class="chips"><span class="chip">Open to entry-level roles</span><span class="chip blue">BSIT student</span></div>
+    <a class="btn" href="Sean-Salay-Resume.pdf" download>Download resume</a>
+  </header>
+
+  <main>
+    <h2 class="list">Tracklist</h2>
+    <ol class="tracks">
+      <li class="track" id="about"><span class="no">1</span><h3>About</h3>
+        <p>I’m an Information Technology student looking for an entry-level IT Support or Technical Support role. I work with computer systems, software troubleshooting, programming, databases, networking fundamentals, and application development. I enjoy explaining technical problems in a simple, clear way, and I’m patient, adaptable, and happy to work on my own or with a team.</p></li>
+
+      <li class="track" id="education"><span class="no">2</span><h3>Education</h3>
+        <ul>
+          <li class="entry"><strong>BS in Information Technology</strong><span class="sub">STI College of San Jose del Monte, Bulacan · 2023–2027</span></li>
+          <li class="entry"><strong>Science, Technology, Engineering, and Mathematics</strong><span class="sub">Northern Quezon College Inc., Senior High School · 2021–2023</span></li>
+        </ul></li>
+
+      <li class="track" id="skills"><span class="no">3</span><h3>Skills</h3>
+        <ul class="tags"><li>Basic computer troubleshooting</li><li>Software installation & configuration</li><li>Basic networking</li><li>Technical problem solving</li><li>Customer service</li><li>English communication</li></ul></li>
+
+      <li class="track" id="languages"><span class="no">4</span><h3>Languages</h3>
+        <ul class="tags"><li>English</li><li>Filipino</li><li>Russian</li><li>French</li><li>Japanese</li><li>Spanish</li></ul></li>
+
+      <li class="track" id="certifications"><span class="no">5</span><h3>Certifications & seminars</h3>
+        <ul>
+          <li class="entry"><strong>SAP S/4HANA</strong><span class="sub">2027</span></li>
+          <li class="entry"><strong>The Digital Bridge</strong><span class="sub">November 2025</span></li>
+          <li class="entry"><strong>Java Fundamentals</strong><span class="sub">June 2024</span></li>
+        </ul></li>
+
+      <li class="track contact" id="contact"><span class="no">6</span><h3>Contact</h3>
+        <div><p>Open to entry-level IT Support roles.</p>
+        <p class="phone"><a href="mailto:salaysean602@gmail.com">salaysean602@gmail.com</a></p>
+        <p class="phone"><a href="tel:+639053717052">0905-371-7052</a></p>
+        <a class="btn" href="mailto:salaysean602@gmail.com">Send an email</a>
+        <ul class="links"><li><a href="https://github.com/yorobinshi" target="_blank" rel="noopener">GitHub</a></li><li><span class="soon">LinkedIn (coming soon)</span></li></ul></div></li>
+    </ol>
+  </main>
+
+  <footer>© 2026 Ueno Sean A. Salay</footer>
+</div>
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('theme');
+  function dark(){var t=r.getAttribute('data-theme');return t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches}
+  function label(){b.textContent=dark()?'Light mode':'Dark mode';b.setAttribute('aria-pressed',String(dark()))}
+  try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s)}catch(e){}
+  label();
+  b.addEventListener('click',function(){
+    var n=dark()?'light':'dark';
+    r.setAttribute('data-theme',n);
+    try{localStorage.setItem('theme',n)}catch(e){}
+    label();
+  });
+})();
+</script>
+</body>
+</html>
